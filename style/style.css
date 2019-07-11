@@ -1,0 +1,8 @@
+/* Add styles for truYum application here */
+
+* {
+    border: 1px solid blue;
+}
+div {
+    height: 100%;
+}
