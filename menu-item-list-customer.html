@@ -6,19 +6,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link type="text/css" rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <title>Menu Item List Customer</title>
 </head>
 
 <body>
-    <div class ="container">
-        <header>Header</header>
-        <main>
-            Main
-        </main>
-        <footer>Footer</footer>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">truYum</span>
+                <!-- Icon -->
+                <img class="mdl-layout-icon logo" src="images/truyum-logo-light.png"></img>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Expandable Search Box -->
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
+                        <i class="material-icons">search</i>
+                    </label>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp">
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="#">Menu</a>
+                    <a class="mdl-navigation__link" href="#">Cart</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Select Role</span>
+            <nav class="mdl-navigation mdl-tabs mdl-js-tabs">
+                <a class="mdl-navigation__link" href="#admin-content"><span onclick="admin();">Admin</span></a>
+
+                <a class="mdl-navigation__link" href="#customer-content"><span onclick="customer();">Customer</span></a>
+            </nav>
+        </div>
     </div>
+    <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+            <div class="page-content">
+                <!-- Your content goes here -->
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+            <div class="page-content">
+                <!-- Your content goes here -->
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+            <div class="page-content">
+                <!-- Your content goes here -->
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-4">
+            <div class="page-content">
+                <!-- Your content goes here -->
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-5">
+            <div class="page-content">
+                <!-- Your content goes here -->
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-6">
+            <div class="page-content">
+                <!-- Your content goes here -->
+            </div>
+        </section>
+        <div class="page-content">
+            <!-- Your content goes here -->
+            <div id="admin-content">
+                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp admin-table">
+                    <thead>
+                        <tr>
+                            <th style="text-align: left">Name</th>
+                            <th style="text-align: right">Price</th>
+                            <th style="text-align: center">Active</th>
+                            <th style="text-align: center">Date of Launch</th>
+                            <th style="text-align: center">Category</th>
+                            <th style="text-align: center">Free Delivery</th>
+                            <th style="text-align: center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tBodyAdmin">
+
+                    </tbody>
+                </table>
+            </div>
+            <div id="customer-content">
+                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp customer-table">
+                    <thead>
+                        <tr>
+                            <th style="text-align: left">Name</th>
+                            <th style="text-align: center">Free Delivery</th>
+                            <th style="text-align: right">Price</th>
+                            <th style="text-align: center">Category</th>
+                            <th style="text-align: center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tBodyCustomer">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+    <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+            <div class="mdl-logo">
+                Copyright &copy; 2019
+            </div>
+        </div>
+    </footer>
+    </div>
+
 </body>
 
 </html>

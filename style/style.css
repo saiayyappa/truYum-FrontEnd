@@ -1,8 +1,58 @@
 /* Add styles for truYum application here */
 
-* {
-    border: 1px solid blue;
+.logo {
+    height: 50px;
+    width: 50px;
+    padding: 3px;
+    margin-left: 25px;
 }
-div {
-    height: 100%;
+
+.customer-table {
+    margin: 0px auto;
+    margin-top: 200px;
+}
+
+.customer-table tr td:first-child {
+    text-align: left;
+}
+
+.customer-table tr td:nth-child(2) {
+    text-align: center;
+}
+
+.customer-table tr td:nth-child(4) {
+    text-align: center;
+}
+
+.customer-table tr td:nth-child(5) {
+    text-align: center;
+}
+
+.admin-table {
+    margin: 0px auto;
+    margin-top: 200px;
+}
+
+.admin-table tr td:first-child {
+    text-align: left;
+}
+
+.admin-table tr td:nth-child(3) {
+    text-align: center;
+}
+
+.admin-table tr td:nth-child(4) {
+    text-align: center;
+}
+
+.admin-table tr td:nth-child(5) {
+    text-align: center;
+}
+
+.admin-table tr td:nth-child(6) {
+    text-align: center;
+}
+
+.admin-table tr td:nth-child(7) {
+    text-align: center;
 }
