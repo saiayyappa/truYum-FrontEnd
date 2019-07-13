@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header a">
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
                 <!-- Title -->
@@ -28,7 +28,7 @@
                         <i class="material-icons">search</i>
                     </label>
                     <div class="mdl-textfield__expandable-holder">
-                        <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp">
+                        <input type="text" name="sample" id="waterfall-exp">
                     </div>
                 </div>
                 <!-- Navigation -->
@@ -48,39 +48,9 @@
         </div>
     </div>
     <main class="mdl-layout__content">
-        <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-            <div class="page-content">
-                <!-- Your content goes here -->
-            </div>
-        </section>
-        <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-            <div class="page-content">
-                <!-- Your content goes here -->
-            </div>
-        </section>
-        <section class="mdl-layout__tab-panel" id="scroll-tab-3">
-            <div class="page-content">
-                <!-- Your content goes here -->
-            </div>
-        </section>
-        <section class="mdl-layout__tab-panel" id="scroll-tab-4">
-            <div class="page-content">
-                <!-- Your content goes here -->
-            </div>
-        </section>
-        <section class="mdl-layout__tab-panel" id="scroll-tab-5">
-            <div class="page-content">
-                <!-- Your content goes here -->
-            </div>
-        </section>
-        <section class="mdl-layout__tab-panel" id="scroll-tab-6">
-            <div class="page-content">
-                <!-- Your content goes here -->
-            </div>
-        </section>
         <div class="page-content">
             <!-- Your content goes here -->
-            <div id="admin-content">
+            <div id="admin-content" class="center-1">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp admin-table">
                     <thead>
                         <tr>
@@ -98,7 +68,41 @@
                     </tbody>
                 </table>
             </div>
-            <div id="customer-content">
+            <div id="admin-edit-form">
+                <form action="#" id="edit-form">
+
+                    <label for="pname">Product Name: </label>
+                    <input type="text" id="pname">
+                    <br>
+                    <label for="price">Price</label>
+                    <input type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="price">
+                    <br>
+                    Active:
+                    <label for="yes">
+                        <input type="radio" id="yes" name="options" value="yes" checked>
+                        Yes
+                    </label>
+                    <label for="no">
+                        <input type="radio" id="no" name="options" value="no">
+                        No
+                    </label>
+                    <br>
+                    <label for="dateOfLaunch">Date of Launch</label>
+                    <input type="date" name="dateOfLaunch" id="dateOfLaunch">
+                    <br>
+                    <label for="Category">Category</label>
+                    <input list="category">
+                    <datalist id="category">
+                        <option value="Starters">
+                        <option value="Main Course">
+                        <option value="Dessert">
+                        <option value="Drinks">
+                    </datalist>
+                    <label for="freeDelivery">Free Delivery</label>
+                    <input id="freeDelivery" type="checkbox" name="freeDelivery" value="Yes" checked><br>
+                </form>
+            </div>
+            <div id="customer-content" class="center-2">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp customer-table">
                     <thead>
                         <tr>

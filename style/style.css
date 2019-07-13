@@ -7,9 +7,14 @@
     margin-left: 25px;
 }
 
-.customer-table {
-    margin: 0px auto;
+.center-1 {
     margin-top: 200px;
+    margin-left: 600px;
+}
+
+.center-2 {
+    margin-top: 200px;
+    margin-left: 700px;
 }
 
 .customer-table tr td:first-child {
@@ -26,11 +31,6 @@
 
 .customer-table tr td:nth-child(5) {
     text-align: center;
-}
-
-.admin-table {
-    margin: 0px auto;
-    margin-top: 200px;
 }
 
 .admin-table tr td:first-child {
@@ -55,4 +55,22 @@
 
 .admin-table tr td:nth-child(7) {
     text-align: center;
+}
+
+#admin-edit-form {
+    display: none;
+    border: 1px solid red;
+    margin-top: 200px;
+    margin-left: 600px;
+    overflow: hidden;
+}
+
+#admin-edit-form form {
+    padding: 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
 }
