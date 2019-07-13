@@ -1,11 +1,13 @@
 // Include truYum form validation functions here
 var foodDatas = [
-    { name: 'Sandwich', price: 99, active: 'Yes', dateOfLaunch: '15/03/2017', category: 'Main Course', freeDelivery: 'Yes' },
-    { name: 'Burger', price: 129, active: 'Yes', dateOfLaunch: '23/12/2017', category: 'Main Course', freeDelivery: 'No' },
-    { name: 'Pizza', price: 149, active: 'Yes', dateOfLaunch: '21/08/2017', category: 'Main Course', freeDelivery: 'No' },
-    { name: 'French Fries', price: 57, active: 'No', dateOfLaunch: '02/07/2017', category: 'Starter', freeDelivery: 'Yes' },
-    { name: 'Chocolate Brownies', price: 32, active: 'Yes', dateOfLaunch: '02/11/2022', category: 'Dessert', freeDelivery: 'Yes' }
+    { id: 1, name: 'Sandwich', price: 99, active: 'Yes', dateOfLaunch: '15/03/2017', category: 'Main Course', freeDelivery: 'Yes' },
+    { id: 2, name: 'Burger', price: 129, active: 'Yes', dateOfLaunch: '23/12/2017', category: 'Main Course', freeDelivery: 'No' },
+    { id: 3, name: 'Pizza', price: 149, active: 'Yes', dateOfLaunch: '21/08/2017', category: 'Main Course', freeDelivery: 'No' },
+    { id: 4, name: 'French Fries', price: 57, active: 'No', dateOfLaunch: '02/07/2017', category: 'Starter', freeDelivery: 'Yes' },
+    { id: 5, name: 'Chocolate Brownies', price: 32, active: 'Yes', dateOfLaunch: '02/11/2022', category: 'Dessert', freeDelivery: 'Yes' }
 ]
+
+var cart = [];
 
 function admin() {
     let adminContent = document.getElementById('admin-content');
@@ -13,6 +15,7 @@ function admin() {
 
     adminContent.style.display = 'block';
     customerContent.style.display = 'none';
+    displayDataAdmin(foodDatas);
 }
 
 function customer() {
@@ -21,10 +24,13 @@ function customer() {
 
     adminContent.style.display = 'none';
     customerContent.style.display = 'block';
+    displayDataCustomer(foodDatas);
 }
 
 const displayDataCustomer = function (foodDatas) {
     let tBody = document.getElementById('tBodyCustomer');
+    tBody.innerHTML = '';
+
     for (let foodData of foodDatas) {
 
         let row = document.createElement('tr');
@@ -48,6 +54,9 @@ const displayDataCustomer = function (foodDatas) {
         row.appendChild(col4);
 
         addToCart.href = "#";
+        addToCart.onclick = function () {
+            cart.push(foodData);
+        }
         addToCart.textContent = "Add to Cart";
         // addToCart.classList.add('mdl-button','mdl-js-button');
 
@@ -60,6 +69,8 @@ const displayDataCustomer = function (foodDatas) {
 
 const displayDataAdmin = function (foodDatas) {
     let tBody = document.getElementById('tBodyAdmin');
+    tBody.innerHTML = '';
+
     for (let foodData of foodDatas) {
 
         let row = document.createElement('tr');
@@ -91,6 +102,9 @@ const displayDataAdmin = function (foodDatas) {
         row.appendChild(col6);
 
         edit.href = "#";
+        edit.onclick = function () {
+            editData(foodData);
+        }
         edit.textContent = "Edit";
         // edit.classList.add('mdl-button','mdl-js-button');
 
@@ -100,5 +114,14 @@ const displayDataAdmin = function (foodDatas) {
     }
 }
 
-displayDataCustomer(foodDatas);
-displayDataAdmin(foodDatas);
+function editData(foodData) {
+    let adminContent = document.getElementById('admin-content');
+    let editForm = document.getElementById('admin-edit-form');
+    adminContent.style.display = 'none';
+    editForm.style.display = 'block';
+    
+}
+
+admin();
+
+

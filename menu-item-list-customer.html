@@ -13,6 +13,8 @@
 </head>
 
 <body>
+    <!-- Uses a header that scrolls with the text, rather than staying
+  locked at the top -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
@@ -22,108 +24,74 @@
                 <img class="mdl-layout-icon logo" src="images/truyum-logo-light.png"></img>
                 <!-- Add spacer, to align navigation to the right -->
                 <div class="mdl-layout-spacer"></div>
-                <!-- Expandable Search Box -->
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-                    <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
-                        <i class="material-icons">search</i>
-                    </label>
-                    <div class="mdl-textfield__expandable-holder">
-                        <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp">
-                    </div>
-                </div>
                 <!-- Navigation -->
                 <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="#">Menu</a>
-                    <a class="mdl-navigation__link" href="#">Cart</a>
+                    <a class="mdl-navigation__link" href="">Menu</a>
+                    <a class="mdl-navigation__link" href="">Cart</a>
                 </nav>
             </div>
         </header>
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Select Role</span>
-            <nav class="mdl-navigation mdl-tabs mdl-js-tabs">
-                <a class="mdl-navigation__link" href="#admin-content"><span onclick="admin();">Admin</span></a>
-
-                <a class="mdl-navigation__link" href="#customer-content"><span onclick="customer();">Customer</span></a>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="">Admin</a>
+                <a class="mdl-navigation__link" href="">Customer</a>
             </nav>
         </div>
-    </div>
-    <main class="mdl-layout__content">
-        <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+        <main class="mdl-layout__content">
             <div class="page-content">
                 <!-- Your content goes here -->
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--3-col"></div>
+                    <div class="mdl-cell--6-col">
+                        <table class="mdl-data-table mdl-js-data-table">
+                            <caption>
+                                <h3>Menu Items</h3>
+                            </caption>
+                            <br><br>
+                            <thead>
+                                <tr>
+                                    <th style="text-align: left">Name</th>
+                                    <th style="text-align: center">Free Delivery</th>
+                                    <th style="text-align: right">Price</th>
+                                    <th style="text-align: center">Category</th>
+                                    <th style="text-align: center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="customer-table">
+                                <tr>
+                                    <td>Sandwich</td>
+                                    <td>Yes</td>
+                                    <td>Rs. 99</td>
+                                    <td>Main Course</td>
+                                    <td><a href="#">Add to Cart</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Burger</td>
+                                    <td>No</td>
+                                    <td>Rs. 129</td>
+                                    <td>Main Course</td>
+                                    <td><a href="#">Add to Cart</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Pizza</td>
+                                    <td>No</td>
+                                    <td>Rs. 149</td>
+                                    <td>Main Course</td>
+                                    <td><a href="#">Add to Cart</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mdl-cell mdl-cell--3-col"></div>
+                </div>
             </div>
-        </section>
-        <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-            <div class="page-content">
-                <!-- Your content goes here -->
+        </main>
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer__left-section">
+                <div class="mdl-logo">Copyright &copy; 2019</div>
             </div>
-        </section>
-        <section class="mdl-layout__tab-panel" id="scroll-tab-3">
-            <div class="page-content">
-                <!-- Your content goes here -->
-            </div>
-        </section>
-        <section class="mdl-layout__tab-panel" id="scroll-tab-4">
-            <div class="page-content">
-                <!-- Your content goes here -->
-            </div>
-        </section>
-        <section class="mdl-layout__tab-panel" id="scroll-tab-5">
-            <div class="page-content">
-                <!-- Your content goes here -->
-            </div>
-        </section>
-        <section class="mdl-layout__tab-panel" id="scroll-tab-6">
-            <div class="page-content">
-                <!-- Your content goes here -->
-            </div>
-        </section>
-        <div class="page-content">
-            <!-- Your content goes here -->
-            <div id="admin-content">
-                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp admin-table">
-                    <thead>
-                        <tr>
-                            <th style="text-align: left">Name</th>
-                            <th style="text-align: right">Price</th>
-                            <th style="text-align: center">Active</th>
-                            <th style="text-align: center">Date of Launch</th>
-                            <th style="text-align: center">Category</th>
-                            <th style="text-align: center">Free Delivery</th>
-                            <th style="text-align: center">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tBodyAdmin">
-
-                    </tbody>
-                </table>
-            </div>
-            <div id="customer-content">
-                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp customer-table">
-                    <thead>
-                        <tr>
-                            <th style="text-align: left">Name</th>
-                            <th style="text-align: center">Free Delivery</th>
-                            <th style="text-align: right">Price</th>
-                            <th style="text-align: center">Category</th>
-                            <th style="text-align: center">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tBodyCustomer">
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </main>
-    <script src="js/script.js"></script>
-    <footer class="mdl-mini-footer">
-        <div class="mdl-mini-footer__left-section">
-            <div class="mdl-logo">
-                Copyright &copy; 2019
-            </div>
-        </div>
-    </footer>
+        </footer>
     </div>
 
 </body>

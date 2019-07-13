@@ -7,52 +7,73 @@
     margin-left: 25px;
 }
 
-.customer-table {
+table {
     margin: 0px auto;
-    margin-top: 200px;
 }
 
-.customer-table tr td:first-child {
+table caption {
+    text-align: left;
+    margin-top: 50px;
+}
+.cart-empty{
+    margin:0px auto;
+    margin-top: 50px;
+}
+
+.notif{
+    color: green;
+    text-align: center;
+    font-weight: bold;
+}
+
+#admin-table td:nth-child(1) {
     text-align: left;
 }
 
-.customer-table tr td:nth-child(2) {
+#admin-table td:nth-child(3) {
     text-align: center;
 }
 
-.customer-table tr td:nth-child(4) {
+#admin-table td:nth-child(4) {
     text-align: center;
 }
 
-.customer-table tr td:nth-child(5) {
+#admin-table td:nth-child(5) {
     text-align: center;
 }
 
-.admin-table {
-    margin: 0px auto;
-    margin-top: 200px;
+#admin-table td:nth-child(6) {
+    text-align: center;
 }
 
-.admin-table tr td:first-child {
+#admin-table td:nth-child(7) {
+    text-align: center;
+}
+
+#customer-table td:nth-child(1) {
     text-align: left;
 }
 
-.admin-table tr td:nth-child(3) {
+#customer-table td:nth-child(2) {
     text-align: center;
 }
 
-.admin-table tr td:nth-child(4) {
+#customer-table td:nth-child(4) {
+    text-align: left;
+}
+
+#customer-table td:nth-child(5) {
     text-align: center;
 }
 
-.admin-table tr td:nth-child(5) {
-    text-align: center;
+#cart-table td:nth-child(1) {
+    text-align: left;
 }
 
-.admin-table tr td:nth-child(6) {
-    text-align: center;
+#cart-table td:nth-child(2) {
+    text-align: left;
 }
 
-.admin-table tr td:nth-child(7) {
-    text-align: center;
+#cart-table tr:last-child {
+    font-weight: bold;
 }
