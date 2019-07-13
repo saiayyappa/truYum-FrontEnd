@@ -1,5 +1,17 @@
 /* Add styles for truYum application here */
 
+.mdl-layout__header-row {
+    background: rgb(48, 84, 150);
+}
+
+.mdl-layout__drawer-button {
+    background-color: rgb(48,84,150) !important;
+}
+
+.mdl-mini-footer {
+    background-color: rgb(141, 141, 141) !important;
+}
+
 .logo {
     height: 50px;
     width: 50px;
@@ -15,12 +27,13 @@ table caption {
     text-align: left;
     margin-top: 50px;
 }
-.cart-empty{
-    margin:0px auto;
+
+.cart-empty {
+    margin: 0px auto;
     margin-top: 50px;
 }
 
-.notif{
+.notif {
     color: green;
     text-align: center;
     font-weight: bold;
