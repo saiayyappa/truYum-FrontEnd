@@ -28,7 +28,7 @@ function customer() {
 }
 
 const displayDataCustomer = function (foodDatas) {
-    let tBody = document.getElementById('tBodyCustomer');
+    let tBody = document.getElementById('customer-table');
     tBody.innerHTML = '';
 
     for (let foodData of foodDatas) {
@@ -53,7 +53,7 @@ const displayDataCustomer = function (foodDatas) {
         col4.textContent = foodData.category;
         row.appendChild(col4);
 
-        addToCart.href = "#";
+        addToCart.href = "menu-item-list-customer-notification.html";
         addToCart.onclick = function () {
             cart.push(foodData);
         }
@@ -101,7 +101,7 @@ const displayDataAdmin = function (foodDatas) {
         col6.textContent = foodData.freeDelivery;
         row.appendChild(col6);
 
-        edit.href = "#";
+        edit.href = "edit-menu-item.html";
         edit.onclick = function () {
             editData(foodData);
         }
@@ -119,9 +119,12 @@ function editData(foodData) {
     let editForm = document.getElementById('admin-edit-form');
     adminContent.style.display = 'none';
     editForm.style.display = 'block';
-    
 }
 
-admin();
-
-
+if (document.getElementById('page').value == 'customer') {
+    displayDataCustomer(foodDatas);
+} else if (document.getElementById('page') == 'admin') {
+    displayDataAdmin(foodDatas);
+} else {
+    console.log("not customer / admin page");
+}
